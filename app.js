@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 	});
 
+	// bien joué les commentaires ;)
 	$('form').on("submit", function(event){
 		event.preventDefault();
 		var add = $('input[name=text1]').val(); // definit une variable, et lui donne pour valeur la saisie de texte
@@ -15,8 +16,8 @@ $(document).ready(function(){
 		$('.newtext').last().toggleClass('fond'); // modifie la couleur de la div definit juste au-dessus avec 'fond' qui es definit en css
 		compteur();
 	});	
-
-		$('ul').on("click", ".delete", function(){ 
+// Indentation
+	$('ul').on("click", ".delete", function(){ 
 
 		$(this).parent('div').remove(); 
 		compteur();
@@ -43,6 +44,8 @@ $(document).ready(function(){
 		$('.bar').show();
 	});
 	
+	// Préférer un verbe d'action pour d'écrire l'action de la fonction : 
+	// updateCompteur() pour bien signaler que cela va changer les données Html.
 	function compteur() {
 		var compte = $('.newtext:not(.bar) ').length;
 		if (compte>1) {
